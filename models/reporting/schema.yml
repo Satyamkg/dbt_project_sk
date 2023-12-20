@@ -1,0 +1,16 @@
+version: 2
+
+models:
+- name: first_model
+  tests:
+    - dbt_utils.unique_combination_of_columns:
+        combination_of_columns:
+          - LOCATION
+          - DATE
+        quote_columns: true
+  columns:
+      - name: LOCATION
+        tests:
+          - accepted_values:
+              values: ['Melbourne', 'Balarat', 'completed', 'returned']
+

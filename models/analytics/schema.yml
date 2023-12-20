@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: max_temperature
+    columns:
+      - name: max_temp_location
+        tests:
+          - unique
+          - not_null: 
+              config: 
+                severity: error 
+                error_if: ">35" 
+                warn_if: ">0"
+                where: "max_temp_location > 0"
+
+
+ 
+
+
+    
+
+      

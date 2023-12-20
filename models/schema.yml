@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: public
+    database: raw_sk  
+    tables:
+      - name: weather2
+      - name: weather
